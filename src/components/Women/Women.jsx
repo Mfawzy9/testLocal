@@ -1,23 +1,24 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import Title from "../Title/Title";
 import ProductCard from "../productCard/ProductCard";
 import Login from "../Login/Login";
+import data from "../../Json/products.json";
 
 const Women = () => {
   const [openModal, setOpenModal] = useState(false);
-  const [women, setWomen] = useState([]);
+  const [women, setWomen] = useState(
+    data?.filter(
+      (item) => item.category == "حريمي" || item.category == "حريمي و رجالي"
+    )
+  );
 
   useEffect(() => {
-    (async function () {
-      const { data } = await axios.get("../src/Json/products.json");
-      setWomen(
-        data?.filter(
-          (item) => item.category == "حريمي" || item.category == "حريمي و رجالي"
-        )
-      );
-    })();
-  }, []);
+    setWomen(
+      data?.filter(
+        (item) => item.category == "حريمي" || item.category == "حريمي و رجالي"
+      )
+    );
+  }, [data]);
   return (
     <>
       <Login openModal={openModal} setOpenModal={setOpenModal} />

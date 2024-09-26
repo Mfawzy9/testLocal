@@ -3,22 +3,20 @@ import { useParams } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCube, Pagination, Navigation, Autoplay } from "swiper/modules";
 import * as fontAwesome from "react-icons/fa"; //fontawesome icons
-import { Button, Modal, Tabs, TextInput } from "flowbite-react";
-import axios from "axios";
 import RatingStars from "../RatingStars/RatingStars";
-import { useForm, ValidationError } from "@formspree/react";
 import Login from "../Login/Login";
 import SaleBadge from "../SaleBadge/SaleBadge";
+import data from "../../Json/products.json";
 
 const ProductDetails = () => {
   const { id } = useParams();
-  const [productDetails, setProductDetails] = useState({});
+  const [productDetails, setProductDetails] = useState(
+    data?.find((item) => item.id == id)
+  );
+
   useEffect(() => {
-    (async function () {
-      const { data } = await axios.get("../src/Json/products.json");
-      setProductDetails(data?.find((item) => item.id == id));
-    })();
-  }, []);
+    setProductDetails(data?.find((item) => item.id == id));
+  }, [data]);
 
   const [openModal, setOpenModal] = useState(false);
 

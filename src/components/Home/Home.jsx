@@ -9,18 +9,19 @@ import axios from "axios";
 import Login from "../Login/Login";
 import Title from "../Title/Title";
 import { Link } from "react-router-dom";
+import data from "../../Json/products.json";
 
 const Home = () => {
   const [openModal, setOpenModal] = useState(false);
 
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
 
-  useEffect(() => {
-    (async function () {
-      const { data } = await axios.get("../src/Json/products.json");
-      setData(data);
-    })();
-  }, []);
+  // useEffect(() => {
+  //   (async function () {
+  //     const { data } = await axios.get("../src/Json/products.json");
+  //     setData(data);
+  //   })();
+  // }, []);
 
   return (
     <>
@@ -53,7 +54,7 @@ const Home = () => {
 
       <Title title={"أحدث المنتجات"} mx={"mx-auto"} my={"my-10"} />
       <div className="grid sm:grid-cols-2 min-h-full md:grid-cols-3 xl:grid-cols-4 justify-center gap-4">
-        {data?.slice(0, 8).map((product, idx) => {
+        {data?.slice(0, 8)?.map((product, idx) => {
           return (
             <ProductCard
               setOpenModal={setOpenModal}
