@@ -1,11 +1,7 @@
-import { useEffect, useState } from "react";
-// import * as fontAwesome from "react-icons/fa"; //fontawesome icons
-// import * as bootstrapIcons from "react-icons/bs"; //bootstrap icons
+import { useState } from "react";
 import mainImg from "../../assets/pngegg.png";
 import { Button } from "flowbite-react";
-
 import ProductCard from "../productCard/ProductCard";
-import axios from "axios";
 import Login from "../Login/Login";
 import Title from "../Title/Title";
 import { Link } from "react-router-dom";

@@ -27,10 +27,12 @@ const ProductDetails = () => {
         <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-6 gap-3 ">
           {/* Product Details */}
           <div className="ps-2 flex flex-col md:col-span-3 lg:col-span-4 justify-center">
-            <RatingStars rating={productDetails?.rating} />
+            <div className="mt-5">
+              <RatingStars rating={productDetails?.rating} />
+            </div>
 
             <div>
-              <ul className="flex flex-col gap-4 mt-3 list-inside text-gray-700">
+              <ul className="flex flex-col gap-4 my-3 list-inside text-gray-700">
                 <li className="dark:text-gray-400 text-gray-600 flex flex-wrap gap-2 items-center">
                   <fontAwesome.FaCircle className="text-[9px]" />
                   مواصفات المنتج :
@@ -89,32 +91,6 @@ const ProductDetails = () => {
                   </span>
                 </li>
               </ul>
-            </div>
-            <div className="my-4 flex items-center gap-3 flex-wrap">
-              {productDetails?.priceAfterDiscount > 0 ? (
-                <>
-                  <span className="font-bold text-2xl">
-                    {productDetails?.priceAfterDiscount
-                      .toString()
-                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}{" "}
-                    EGP
-                  </span>
-
-                  <span className="line-through ">
-                    {productDetails?.price
-                      .toString()
-                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}{" "}
-                    EGP
-                  </span>
-                </>
-              ) : (
-                <span className=" font-bold text-2xl">
-                  {productDetails?.price
-                    ?.toString()
-                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}{" "}
-                  EGP
-                </span>
-              )}
             </div>
 
             <button

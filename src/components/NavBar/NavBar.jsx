@@ -1,4 +1,4 @@
-import { Navbar } from "flowbite-react";
+import { DarkThemeToggle, Flowbite, Navbar } from "flowbite-react";
 import { Link, NavLink } from "react-router-dom";
 
 export function NavBar() {
@@ -9,7 +9,11 @@ export function NavBar() {
       rounded
       dir="ltr"
     >
-      <Link to={"/"} className="flex items-center">
+      <Link
+        to={"/"}
+        onClick={() => scrollTo(0, 0)}
+        className="flex items-center"
+      >
         <img
           src="https://images.vexels.com/media/users/3/295503/isolated/lists/47d366ddc3b197d3fcf6c1d7f4cdf2fd-medicine-scrub-cut-out-icon.png"
           className="mr-1 h-6 sm:h-9"
@@ -19,27 +23,37 @@ export function NavBar() {
           Scrubs egypt
         </span>
       </Link>
-      <Navbar.Toggle />
+      <div className="md:order-last">
+        <Navbar.Toggle />
+        <Flowbite>
+          <DarkThemeToggle theme={{ light: "light", dark: "dark" }} />
+        </Flowbite>
+      </div>
+
       <Navbar.Collapse dir="rtl">
         <NavLink
+          onClick={() => scrollTo(0, 0)}
           className="px-3 py-2 text-center m-[3px!important] nav-link"
           to={"/"}
         >
           الرئيسية
         </NavLink>
         <NavLink
+          onClick={() => scrollTo(0, 0)}
           className="px-3 py-2 text-center m-[3px!important] nav-link"
           to={"/men"}
         >
           المنتجات الرجالي
         </NavLink>
         <NavLink
+          onClick={() => scrollTo(0, 0)}
           className="px-3 py-2 text-center m-[3px!important] nav-link"
           to={"/women"}
         >
           المنتجات النسائي
         </NavLink>
         <NavLink
+          onClick={() => scrollTo(0, 0)}
           className="px-3 py-2 text-center m-[3px!important] nav-link"
           to={"/products"}
         >

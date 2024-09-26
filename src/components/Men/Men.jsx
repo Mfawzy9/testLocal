@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import ProductCard from "../productCard/ProductCard";
 import Title from "../Title/Title";

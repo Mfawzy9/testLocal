@@ -17,17 +17,26 @@ const LayOut = () => {
               <h4 className="text-lg font-bold mb-4">روابط سريعة</h4>
               <ul>
                 <li className="mb-2">
-                  <a className="text-gray-600 hover:text-gray-900" href="#">
+                  <a
+                    className="dark:text-gray-400 dark:hover:text-gray-50 text-gray-600 hover:text-gray-900"
+                    href="#"
+                  >
                     من نحن
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a className="text-gray-600 hover:text-gray-900" href="#">
+                  <a
+                    className="dark:text-gray-400 dark:hover:text-gray-50 text-gray-600 hover:text-gray-900"
+                    href="#"
+                  >
                     منتجاتنا
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a className="text-gray-600 hover:text-gray-900" href="#">
+                  <a
+                    className="dark:text-gray-400 dark:hover:text-gray-50 text-gray-600 hover:text-gray-900"
+                    href="#"
+                  >
                     اتصل بنا
                   </a>
                 </li>
@@ -37,17 +46,26 @@ const LayOut = () => {
               <h4 className="text-lg font-bold mb-4">خدماتنا</h4>
               <ul>
                 <li className="mb-2">
-                  <a className="text-gray-600 hover:text-gray-900" href="#">
+                  <a
+                    className="dark:text-gray-400 dark:hover:text-gray-50 text-gray-600 hover:text-gray-900"
+                    href="#"
+                  >
                     تسوق اون لاين
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a className="text-gray-600 hover:text-gray-900" href="#">
+                  <a
+                    className="dark:text-gray-400 dark:hover:text-gray-50 text-gray-600 hover:text-gray-900"
+                    href="#"
+                  >
                     توصيل سريع
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a className="text-gray-600 hover:text-gray-900" href="#">
+                  <a
+                    className="dark:text-gray-400 dark:hover:text-gray-50 text-gray-600 hover:text-gray-900"
+                    href="#"
+                  >
                     دعم فني
                   </a>
                 </li>
@@ -57,17 +75,26 @@ const LayOut = () => {
               <h4 className="text-lg font-bold mb-4">تواصل معنا</h4>
               <ul>
                 <li className="mb-2">
-                  <a className="text-gray-600 hover:text-gray-900" href="#">
+                  <a
+                    className="dark:text-gray-400 dark:hover:text-gray-50 text-gray-600 hover:text-gray-900"
+                    href="#"
+                  >
                     البريد الالكتروني: info@scrubsEgypt.com
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a className="text-gray-600 hover:text-gray-900" href="#">
+                  <a
+                    className="dark:text-gray-400 dark:hover:text-gray-50 text-gray-600 hover:text-gray-900"
+                    href="#"
+                  >
                     الهاتف: 00201036451892
                   </a>
                 </li>
                 <li className="mb-2">
-                  <a className="text-gray-600 hover:text-gray-900" href="#">
+                  <a
+                    className="dark:text-gray-400 dark:hover:text-gray-50 text-gray-600 hover:text-gray-900"
+                    href="#"
+                  >
                     العنوان: القاهرة - مصر
                   </a>
                 </li>

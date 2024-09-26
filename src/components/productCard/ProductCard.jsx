@@ -7,7 +7,10 @@ import SaleBadge from "../SaleBadge/SaleBadge";
 export default function ProductCard({ product, setOpenModal }) {
   return (
     <div className="w-full relative max-w-sm bg-white border shadow-2xl border-gray-400 rounded-lg dark:bg-gray-800 dark:border-gray-700">
-      <Link to={`/productDetails/${product?.id}`}>
+      <Link
+        onclick={() => scrollTo(0, 0)}
+        to={`/productDetails/${product?.id}`}
+      >
         <img
           className="p-8 rounded-t-lg hover:scale-110 transition-all duration-500"
           src={product?.mainImg}
@@ -16,7 +19,10 @@ export default function ProductCard({ product, setOpenModal }) {
       </Link>
       <SaleBadge product={product} top={"top-0"} />
       <div className="px-5 pb-5">
-        <Link to={`/productDetails/${product?.id}`}>
+        <Link
+          onclick={() => scrollTo(0, 0)}
+          to={`/productDetails/${product?.id}`}
+        >
           <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white line-clamp-3">
             {product?.description}
           </h5>
