@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.active,
+.nav-link:hover {
+    background-color: #0e7490;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #0e7490;
+    color: white;
+}
